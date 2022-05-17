@@ -27,24 +27,30 @@ const Navigation = ({ history }) => (
           Cart
         </Link>
       </li>
-      <li className="nav-items">
-        <Link
-          style={currentTab(history, "/user/dashborad")}
-          className="nav-link"
-          to="/user/dashboard"
-        >
-          DashBoard
-        </Link>
-      </li>
-      <li className="nav-items">
-        <Link
-          style={currentTab(history, "/admin/dashborad")}
-          className="nav-link"
-          to="/admin/dashboard"
-        >
-          A. DashBoard
-        </Link>
-      </li>
+
+      {isAuthenticated() && isAuthenticated().user.role === 0 && (
+        <li className="nav-items">
+          <Link
+            style={currentTab(history, "/user/dashborad")}
+            className="nav-link"
+            to="/user/dashboard"
+          >
+            U. DashBoard
+          </Link>
+        </li>
+      )}
+
+      {isAuthenticated() && isAuthenticated().user.role === 1 && (
+        <li className="nav-items">
+          <Link
+            style={currentTab(history, "/admin/dashborad")}
+            className="nav-link"
+            to="/admin/dashboard"
+          >
+            A. DashBoard
+          </Link>
+        </li>
+      )}
 
       {!isAuthenticated() && (
         <Fragment>
