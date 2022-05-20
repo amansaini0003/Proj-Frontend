@@ -21,7 +21,7 @@ export const createCategory = async (userId, token, category) => {
 // get all categories
 export const getCategories = async () => {
   try {
-    const res = await fetch(`{API}/categories`, {
+    const res = await fetch(`${API}/categories`, {
       method: "GET",
     });
     return await res.json();
@@ -52,7 +52,7 @@ export const createProduct = async (userId, token, product) => {
 //get all products
 export const getProducts = async () => {
   try {
-    const res = await fetch(`{API}/products`, {
+    const res = await fetch(`${API}/products`, {
       method: "GET",
     });
     return await res.json();
