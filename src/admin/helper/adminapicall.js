@@ -30,6 +30,22 @@ export const getCategories = async () => {
   }
 };
 
+//delete a category
+export const deleteCategory = async (categoryId, userId, token) => {
+  try {
+    const res = await fetch(`${API}/category/${categoryId}/${userId}`, {
+      method: "DELETE",
+      headers: {
+        Accept: "application/json",
+        Authorization: `Bearer ${token}`,
+      },
+    });
+    return await res.json();
+  } catch (err) {
+    return console.log(err, "error in delete category");
+  }
+};
+
 //product calls
 
 //create a product
@@ -62,7 +78,7 @@ export const getProducts = async () => {
 };
 
 //delete a product
-export const deleteProduct = async (productId, userId, token, product) => {
+export const deleteProduct = async (productId, userId, token) => {
   try {
     const res = await fetch(`${API}/product/${productId}/${userId}`, {
       method: "DELETE",

@@ -23,11 +23,11 @@ const Base = ({
           <h4>If you got any question feel free to reach out !</h4>
           <button className="btn btn-warning btn-lg">Contact Us</button>
         </div>
-        <div className="container">
+        {/* <div className="container">
           <span className="text-white">
             An Amazing <strong>MERN</strong> Bootcamp
           </span>
-        </div>
+        </div> */}
       </footer>
     </>
   );

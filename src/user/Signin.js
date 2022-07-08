@@ -99,7 +99,7 @@ const Signin = () => {
                 type="password"
               />
             </div>
-            <div class="d-grid gap-2 mt-4">
+            <div className="d-grid gap-2 mt-4">
               <button onClick={onSubmit} className="btn btn-success">
                 Submit
               </button>

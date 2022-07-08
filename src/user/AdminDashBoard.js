@@ -64,7 +64,7 @@ const AdminDashBoard = () => {
 
   return (
     <Base
-      title="Welcone to admin area"
+      title="Welcome to admin area"
       description="Manage all of your products here"
       className="container bg-success p-4"
     >
